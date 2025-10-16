@@ -21,5 +21,12 @@ public class Main {
         System.out.println(skipRed.canPlayCard(red7)); // true (same color)
         skipRed.play();
         drawTwoBlue.play();
+
+        WildCard wild = new WildCard(WildCard.WildType.NORMAL);
+        WildCard wild4 = new WildCard(WildCard.WildType.DRAW_FOUR);
+
+        System.out.println(wild.canPlayCard(new NumberCard(Color.RED, 5))); // true
+        wild.play();
+        wild4.play();
     }
 }

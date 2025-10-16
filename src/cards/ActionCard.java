@@ -49,7 +49,7 @@ public class ActionCard extends UnoCard {
     public void play() {
         System.out.println("Played " + toString());
 
-        // Action Logic
+        // Action Switch
         switch (action) {
             case SKIP -> System.out.println("Effect: Next player is skipped!");
             case REVERSE -> System.out.println("Effect: Play order reversed!");
