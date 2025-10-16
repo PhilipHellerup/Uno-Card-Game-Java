@@ -6,6 +6,20 @@ import cards.*;
 /* --- Main Class --- */
 public class Main {
     public static void main(String[] args) {
+        Deck deck = new Deck();
+
+        System.out.println("Drawing 5 cards:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(deck.drawCard());
+        }
+
+        // Simulate starting a discard pile
+        UnoCard top = deck.drawCard();
+        deck.startDiscard(top);
+        System.out.println("\nTop card on discard pile: " + deck.getTopCard());
+
+        System.out.println("\nRemaining cards in deck: " + deck.remainingCards());
+
         Player p = new Player("Philip");
 
         // Give Alice a few cards
