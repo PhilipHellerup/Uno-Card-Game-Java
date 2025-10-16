@@ -62,7 +62,7 @@ public class UnoGame {
 
     // Handles a single player's turn
     private void playTurn() {
-        System.out.println("\n---" + currentPlayer.getName() + "'s turn ---");
+        System.out.println("\n--- " + currentPlayer.getName() + "'s turn ---");
         System.out.println("Top card: " + topCard);
 
         // Player chooses a card to play
