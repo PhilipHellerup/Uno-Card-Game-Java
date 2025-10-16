@@ -13,5 +13,13 @@ public class Main {
         System.out.println(red5.canPlayCard(blue5)); // true (same number)
         System.out.println(red5.canPlayCard(red2));  // true (same color)
         System.out.println(red5.canPlayCard(new NumberCard(Color.GREEN, 9))); // false
+
+        ActionCard skipRed = new ActionCard(Color.RED, ActionCard.ActionType.SKIP);
+        ActionCard drawTwoBlue = new ActionCard(Color.BLUE, ActionCard.ActionType.DRAW_TWO);
+        NumberCard red7 = new NumberCard(Color.RED, 7);
+
+        System.out.println(skipRed.canPlayCard(red7)); // true (same color)
+        skipRed.play();
+        drawTwoBlue.play();
     }
 }

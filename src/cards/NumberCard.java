@@ -33,7 +33,7 @@ public class NumberCard extends UnoCard {
             return this.value == otherNumberCard.getValue();
         }
 
-        // Otherwise, annot play
+        // Otherwise, cannot play
         return false;
     }
 
