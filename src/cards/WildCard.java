@@ -1,6 +1,6 @@
 package cards; // Project Organization
 
-/* --- ActionCard Class --- */
+/* --- WildCard Class --- */
 // Represents a Wild or Wild Draw Four Card
 public class WildCard extends UnoCard {
     // Enum

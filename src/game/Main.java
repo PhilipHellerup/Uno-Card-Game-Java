@@ -6,6 +6,27 @@ import cards.*;
 /* --- Main Class --- */
 public class Main {
     public static void main(String[] args) {
+        Player p = new Player("Philip");
+
+        // Give Alice a few cards
+        p.addCard(new NumberCard(Color.RED, 5));
+        p.addCard(new ActionCard(Color.RED, ActionCard.ActionType.SKIP));
+        p.addCard(new NumberCard(Color.BLUE, 7));
+        p.addCard(new WildCard(WildCard.WildType.NORMAL));
+
+        // Simulate a top card
+        UnoCard topCard = new NumberCard(Color.RED, 9);
+
+        // Ask the player which card to play
+        UnoCard chosen = p.chooseCardToPlay(topCard);
+
+        if (chosen == null) {
+            System.out.println("Philip chose to draw a card.");
+        } else {
+            System.out.println("Philip played: " + chosen);
+        }
+
+        /*
         NumberCard red5 = new NumberCard(Color.RED, 5);
         NumberCard blue5 = new NumberCard(Color.BLUE, 5);
         NumberCard red2 = new NumberCard(Color.RED, 2);
@@ -28,5 +49,6 @@ public class Main {
         System.out.println(wild.canPlayCard(new NumberCard(Color.RED, 5))); // true
         wild.play();
         wild4.play();
+        */
     }
 }
